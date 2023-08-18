@@ -1,35 +1,35 @@
 var palavras = [
-    "ABACATE",
-    "ABACAXI",
-    "ACEROLA",
-    "AÇAÍ",
-    "ARAÇA",
-    "BACABA",
-    "BACURI",
-    "BANANA",
-    "CAJÁ",
-    "CAJÚ",
-    "CARAMBOLA",
-    "CUPUAÇU",
-    "GRAVIOLA",
-    "GOIABA",
-    "JABUTICABA",
-    "JENIPAPO",
-    "MAÇÃ",
-    "MANGABA",
-    "MANGA",
-    "MARACUJÁ",
-    "MURICI",
-    "PEQUI",
-    "PITANGA",
-    "PITAYA",
-    "SAPOTI",
-    "TANGERINA",
-    "UMBU",
-    "UVA",
-    "UVAIA"
+  "ABACATE",
+  "ABACAXI",
+  "ACEROLA",
+  "ACAI",
+  "ARACA",
+  "BACABA",
+  "BACURI",
+  "BANANA",
+  "CAJA",
+  "CAJU",
+  "CARAMBOLA",
+  "CUPUACU",
+  "GRAVIOLA",
+  "GOIABA",
+  "JABUTICABA",
+  "JENIPAPO",
+  "MACA",
+  "MANGABA",
+  "MANGA",
+  "MARACUJA",
+  "MURICI",
+  "PEQUI",
+  "PITANGA",
+  "PITAYA",
+  "SAPOTI",
+  "TANGERINA",
+  "UMBU",
+  "UVA",
+  "UVAIA"
   ];
-const palavraSelecionada = palavras[Math.floor(Math.random() * palavras.length)];
+var palavraSelecionada = palavras[Math.floor(Math.random() * palavras.length)];
 let letrasAdvinhadas = [];
 
 function exibirPalavra() {
@@ -47,6 +47,10 @@ function exibirPalavra() {
             botao.disabled = true;
         });
     }
+}
+
+function escolherPalavra(){
+  palavraSelecionada = palavras[Math.floor(Math.random() * palavras.length)];
 }
 
 function adivinharLetra(letra) {
@@ -92,7 +96,7 @@ const tentativasRestantesSpan = document.getElementById('tentativasRestantes');
 
 
 function reiniciarJogo() {
-  
+  escolherPalavra();
   letrasAdvinhadas = [];
   tentativasRestantes = maxTentativas;
   exibirPalavra();
